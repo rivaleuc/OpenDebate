@@ -11,6 +11,7 @@ reasoning are advisory; the winner is the consensus output.
 The verb is **"argue in alternating turns"** — distinct from negotiating a settlement or ranking
 independent entries; it's an adversarial transcript scored as a whole.
 
+- **Live demo:** https://opendebate.pages.dev
 - **Contract (Bradbury, chain 4221):** `0xA128E767ae6A8562e5e5B8c77091a47FFeba7cBE`
 - **Deployed from:** `rivale` (`0xc388…51A44`)
 - **Explorer:** https://explorer-bradbury.genlayer.com/contract/0xA128E767ae6A8562e5e5B8c77091a47FFeba7cBE

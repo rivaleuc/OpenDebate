@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* ----- OpenDebate palette: violet rostrum + pink, near-black ----- */
+@theme {
+  --color-background: #0b0710;
+  --color-surface: #140c18;
+  --color-card: #190f22;
+  --color-border: #2e2143;
+  --color-foreground: #f0e9f5;
+  --color-muted: #a08fb3;
+
+  --color-primary: #a78bfa;            /* violet-400 — brand / rostrum */
+  --color-primary-foreground: #0a0a16;
+  --color-accent: #f472b6;             /* pink-400 — emphasis */
+
+  --color-true: #34d399;               /* emerald — side A / for */
+  --color-false: #fb7185;              /* rose — side B / against */
+  --color-unverifiable: #fbbf24;       /* amber — tie */
+  --color-ring: #a78bfa;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-100% - var(--gap, 1rem))); } }
+@keyframes gradient-x { to { background-position: 200% center; } }
+@keyframes meteor { 0% { transform: rotate(215deg) translateX(0); opacity: 1; } 70% { opacity: 1; } 100% { transform: rotate(215deg) translateX(-560px); opacity: 0; } }
+@keyframes shiny { 0% { background-position: calc(-100% - var(--shiny-w, 100px)) 0; } 100% { background-position: calc(100% + var(--shiny-w, 100px)) 0; } }
+@keyframes scan { 0% { transform: translateY(-120%); } 100% { transform: translateY(120%); } }
+@keyframes pulse-ring { 0% { transform: scale(.8); opacity: .5; } 100% { transform: scale(2.2); opacity: 0; } }
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: color-mix(in oklab, var(--color-primary) 32%, transparent); }
+}
